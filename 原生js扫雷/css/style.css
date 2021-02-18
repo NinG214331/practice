@@ -1,0 +1,113 @@
+#box{
+    margin: 50px auto;
+    text-align: center;
+}
+
+.head{
+    margin-bottom: 10px;
+}
+
+.head button{
+    padding: 5px,15px;
+    background: #02a4ad;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+.head button.active {
+    background: #00abff;
+}
+
+table{
+    border-spacing: 1px;
+    background: #929196;
+    margin: 0 auto;
+}
+
+td{
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    background: #ccc;
+    border: 2px solid;
+    border-color: #fff #a2a2a2 #a2a2a2 #fff;
+    text-align: center;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.info{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.mine{
+    background: #d9d9d9 url('../img/mine.png') no-repeat center;
+    background-size: cover;
+    border: 2px;
+}
+
+.flag{
+    background: #ccc url('../img/flag.png') no-repeat center;
+    background-size: cover;
+}
+
+
+
+.zero{
+    background-color: #d9d9d9;
+    background: #d9d9d9;
+    /* color: #d9d9d9; */
+    border: 2px;
+}
+.one{
+    background-color: #d9d9d9;
+    background: #d9d9d9;
+    color: #0332fe;
+    border: 2px;
+}
+.two{
+    background-color: #d9d9d9;
+    background: #d9d9d9;
+    color: #019f02;
+    border: 2px;
+}
+.three{
+    background-color: #d9d9d9;
+    background: #d9d9d9;
+    color: #ff2600;
+    border: 2px;
+}
+.four{
+    background-color: #d9d9d9;
+    background: #d9d9d9;
+    color: #93208f;
+    border: 2px;
+}
+.five{
+    background-color: #d9d9d9;
+    background: #d9d9d9;
+    color: #ff7f29;
+    border: 2px;
+}
+.six{
+    background-color: #d9d9d9;
+    background: #d9d9d9;
+    color: #ff3fff;
+    border: 2px;
+}
+.seven{
+    background-color: #d9d9d9;
+    background: #d9d9d9;
+    color: #3fffbf;
+    border: 2px;
+}
+.eight{
+    background-color: #d9d9d9;
+    background: #d9d9d9;
+    color: #22ee0f;
+    border: 2px;
+}
