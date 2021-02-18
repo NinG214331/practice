@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#app{
+				position: relative;
+				/* top: 50%; */
+				/* left: 50%; */
+				margin: auto;
+				width: 520px;
+				height: 280px;
+			}
+			a{
+				display: block;
+				text-decoration: none;
+				text-align: center;
+				color: #ccc;
+				width: 20px;
+				height: 40px;
+				line-height: 40px;
+				background-color: rgba(0,0,0,0.5);
+			}
+			.left{
+				position: absolute;
+				left: 0;
+				top: 50%;
+			}
+			.right{
+				position: absolute;
+				right: 0;
+				top: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id = "app">
+			<img :src="imgArr[index]">
+			<a href="javascript:void(0)" class="left" v-show = "index != 0" @click="prev"><</a>
+			<a href="javascript:void(0)" class="right" v-show = "index < imgArr.length - 1" @click="next">></a>
+		</div>
+		<script type = "text/javascript">
+			var app = new Vue({
+				el : "#app",
+				data : {
+					imgArr : ["https://img.alicdn.com/imgextra/i3/6000000001010/O1CN01e9keZJ1JKcgLRRlx7_!!6000000001010-2-octopus.png",
+					"https://aecpm.alicdn.com/imgextra/i1/370627083/O1CN01TKiHou22C3zH8TrTf_!!370627083-0-alimamazszw.jpg",
+					"https://img.alicdn.com/imgextra/i4/2380500703/O1CN01XthFDj1H414kQkdXM_!!2380500703-0-alimamazszw.jpg",
+					"https://img.alicdn.com/simba/img/TB1I3teXIfpK1RjSZFOSuu6nFXa.jpg",
+					"https://img.alicdn.com/tfs/TB1wOidVWL7gK0jSZFBXXXZZpXa-520-280.jpg"],
+					index : 0,
+					// isShow : false
+				},
+				methods:{
+					prev : function () {
+						if(this.index != 0){
+							this.index--;
+						}
+					},
+					next : function () {
+						if(this.index < this.imgArr.length - 1){
+							this.index++;
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

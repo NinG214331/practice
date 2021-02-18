@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<div id="app">
+			<div class="head">
+				<h3>记事本</h3>
+				<input type="text" autocomplete="off"  v-model="message" @keyup.enter="add" @click="inputClear" @blur="blur"/>
+			</div>
+			<div class="body">
+				<ul class="todolist">
+					<li class="todo" v-for="(itme,index) in list">
+						<div class="view clearfix">
+							<span class="index fl">{{index+1}}.</span>
+							<p class="fl">{{itme}}</p>
+							<button class="del fr" @click="remove(index)">x</button>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="foot clearfix">
+				<span class="left fl" v-show="list.length > 0">{{list.length}} itmes</span>
+				<button class="right fr" type="button" @click="allClear()" v-show="list.length > 0">Clear</button>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var app = new Vue({
+				el:"#app",
+				data:{
+					message:"请输入",
+					list:["吃饭","睡觉","写代码"]
+				},
+				methods:{
+					inputClear:function(){
+						if(this.message == "请输入"){
+							this.message = "";
+						}
+					},
+					blur:function(){
+						if(this.message == ''){
+							this.message = '请输入';
+						}
+					},
+					add:function(){
+						if(this.message != '' && this.message != '请输入'){
+							this.list.push(this.message);
+							this.message = '请输入'
+						}else{
+							alert("输入为空");
+							this.message = '请输入'
+						}
+					},
+					remove:function(index){
+						this.list.splice(index,1);
+					},
+					allClear:function(){
+						this.list = [];
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

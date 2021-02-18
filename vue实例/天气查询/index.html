@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<div class="wrap" id="app">
+		  <div class="search_form">
+		    <div class="logo"><img src="img/logo.png" alt="logo" /></div>
+		    <div class="form_group">
+		      <input type="text" v-model="city"  @keyup.enter="searchWeather"   class="input_txt" placeholder="请输入查询的天气"/>
+		      <button class="input_sub" @click="searchWeather">
+		        搜 索
+		      </button>
+		    </div>
+		    <div class="hotkey">
+		      <a href="javascript:;" @click="text">北京</a>
+		      <a href="javascript:;" @click="text">上海</a>
+		      <a href="javascript:;" @click="text">广州</a>
+		      <a href="javascript:;" @click="text">深圳</a>
+		    </div>
+		  </div>
+		  <ul class="weather_list">
+		    <li v-for="item in weatherList">
+		      <div class="info_type"><span class="iconfont">{{ item.type }}</span></div>
+		      <div class="info_temp">
+		        <b>{{ item.low }}</b>
+		        ~
+		        <b>{{ item.high }}</b>
+		      </div>
+		      <div class="info_date"><span>{{ item.date }}</span></div>
+		    </li>
+		  </ul>
+		</div>
+		<script src="./js/demo.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
