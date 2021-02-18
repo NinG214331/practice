@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="./css/reset.css">
+<style>
+    .wrapper{
+        /* display: none; */
+        position: relative;
+        margin: auto;
+        /* left: 500px; */
+        top: 20px;
+        width: 520px;
+        height: 280px;
+        overflow: hidden; 
+        
+    }
+
+    .img-list{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3120px;
+        transition: 0.5s ease;
+    }
+
+    .content{
+        border-radius: 10px;
+        position: absolute;
+        bottom: 15px;
+        height: 13px;
+        text-align: center;
+        font-size: 0;
+        left: 50%;
+        margin-left: -39px;
+        background-color: rgba(255,255,255,.3);
+    }
+    .content li{
+        display: inline-block;
+       /* width: 8px; */
+       /* height: 8px; */
+       margin: 3px;
+       /* border-radius: 50%; */
+       /* background-color: #fff;  */
+    }
+    .content li a{
+        display: block;
+        padding-top: 8px;
+        width: 8px;
+        height: 0;
+        border-radius: 50%;
+        background: #fff;
+    }
+
+    .content li .select{
+        background: #ff5000;
+    }
+
+    .btn{
+        position: absolute;
+        top : 110px;
+        width: 20px;
+        height: 40px;
+        z-index: 3;
+        text-align: center;
+        font-size: 16px;
+        line-height: 40px;
+        color: rgba(0,0,0,0.7);
+        background-color: rgba(255,255,255,0.7);
+    }
+    /* img{
+        width: 200px;
+        height: 100px;
+    } */
+</style>
+<!-- <script type="text/javascript" src="./js/demo.js"></script> -->
+<body>
+    <div class="wrapper">
+        <ul class="img-list clearfix">
+            <li class="fl"><img src="https://img.alicdn.com/imgextra/i3/6000000001010/O1CN01e9keZJ1JKcgLRRlx7_!!6000000001010-2-octopus.png"></li>
+            <li class="fl"><img src="https://aecpm.alicdn.com/imgextra/i1/370627083/O1CN01TKiHou22C3zH8TrTf_!!370627083-0-alimamazszw.jpg"></li>
+            <li class="fl"><img src="https://img.alicdn.com/imgextra/i4/2380500703/O1CN01XthFDj1H414kQkdXM_!!2380500703-0-alimamazszw.jpg"></li>
+            <li class="fl"><img src="https://img.alicdn.com/simba/img/TB1I3teXIfpK1RjSZFOSuu6nFXa.jpg"></li>
+            <li class="fl"><img src="https://img.alicdn.com/tfs/TB1wOidVWL7gK0jSZFBXXXZZpXa-520-280.jpg"></li>
+        </ul>
+
+        <ul class="content clearfix">
+            <li class="fl"><a class="select" href="javascript:void(0);">1</a></li>
+            <li class="fl"><a href="javascript:void(0);">2</a></li>
+            <li class="fl"><a href="javascript:void(0);">3</a></li>
+            <li class="fl"><a href="javascript:void(0);">4</a></li>
+            <li class="fl"><a href="javascript:void(0);">5</a></li>
+        </ul>
+        <div class="btn" style="left: 0;">&lt;</div>
+        <div class="btn" style="right: 0;">&gt;</div>
+    </div>
+    
+
+    <script src="./js/demo.js"></script>
+    <script type="text/javascript">
+
+
+        
+
+
+
+
+        // for(var j = 0; j < len; j++){
+        //     (function (j) {
+        //         a[j].onclick = function () {
+        //             clearInterval(timer1);
+        //             ul.style.left = -520*j + "px";
+        //             count = j;
+        //             for(var k = 0; k < len; k++){
+        //                 a[k].className = '';
+        //             }
+        //             a[count].className = 'select';
+        //             timer1 = setInterval(function () {st(1);},5000);
+        //         }
+        //     }(j))
+        // }
+
+
+        // timer1 = setInterval(function () {st(1);},5000);
+        
+
+    </script>
+
+
+</body>
+</html>
